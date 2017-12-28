@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require 'grpm'
+require 'yaml'
+
+deps = YAML.load_file('./Grcfile.yml')['deps']
+
+deps.each do |dep|
+  if dep['type'] == 'gitlab'
+    Grpm::Gitlab.new(dep['url']).install
+  end
+end

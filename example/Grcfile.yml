@@ -1,0 +1,3 @@
+deps:
+  - type: gitlab
+    url: https://git.xx.xx:xx/xx/auth.git
