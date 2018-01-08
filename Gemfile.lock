@@ -1,14 +1,14 @@
 PATH
   remote: .
   specs:
-    grpm (0.1.0)
+    grpm (0.2.0)
       gitlab
 
 GEM
   remote: https://rubygems.org/
   specs:
     coderay (1.1.2)
-    gitlab (4.2.0)
+    gitlab (4.3.0)
       httparty
       terminal-table
     httparty (0.15.6)

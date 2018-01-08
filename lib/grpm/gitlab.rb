@@ -48,6 +48,14 @@ module Grpm
         end
       }.each { |path|
         dir = Pathname.new('./grpm').join(@info.name)
+        if path[1] == '~'
+          path = Pathname.new('/').join(path[2..-1])
+          dir = dir.join(path.dirname.to_s[1..-1])
+        end
+
+        puts "dep: #{path}"
+        puts "dir: #{dir}"
+
         file_name = Pathname.new(path).basename.to_s
         file = @client.file_contents(@id, path)
 
